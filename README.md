@@ -1,6 +1,7 @@
 # [CISC 4080: Algorithms](http://www.dsm.fordham.edu/~eschomburg/algorithms/)
+
 ## Homework 6 (check back for updates)
-#### Due Wednesday, November 22</h4
+**Due Wednesday, November 22**
         
 1.  The following files contain an implementation, and some testing
     code, of a binary heap for use as a min-priority queue. You
@@ -12,8 +13,8 @@
     and observing the resulting heap as it repeatedly pops its min-
     key values.
 
-    * [`bin_heap.h`](bin_heap.h)
-    * [`bin_heap.cpp`](bin_heap.cpp)
+    *   [`bin_heap.h`](bin_heap.h)
+    *   [`bin_heap.cpp`](bin_heap.cpp)
 
 1.  The following files contain C++ code and a text file with
     interstate highway route distances between cities across the
@@ -25,18 +26,18 @@
     very similar to that found in HW5, but slightly modified to
     incorporate edges with non-integer lengths. You should not need
     to modify it. Your task is to complete the implementations of
-    the `Dijkstra()` and `get_path()`
-    functions in `routes.cpp` to obtain the path distances
-    sought in the `test_shortest_paths()` function that 
-    runs when the compiled code is executed from the command line.
+    `Dijkstra()` and `get_path()` in [`routes.cpp`](routes.cpp) to obtain
+    the path distances sought in `test_shortest_paths()`, which runs when
+    the compiled code is executed from the command line.
 
     The `test_shortest_paths()` function should print
     paths and path distances between:
-    i. New York to Los Angeles
-    i. New York to Miami
-    i. New York to Seattle
-    i. New York to San Francisco
-    i. New York to Bostong
+
+    *   New York to Los Angeles
+    *   New York to Miami
+    *   New York to Seattle
+    *   New York to San Francisco
+    *   New York to Bostong
 
     As in any problem you are trying to solve, it may help in your
     code development to create a smaller graph for testing purposes.
@@ -44,22 +45,23 @@
     city graph file from the one provided and having the program use
     your modified version until you have your program working.
 
-    * [`graph.h`](graph.h)
-    * [`routes.cpp`](routes.cpp)
-    * [`city_connections.txt`](city_connections.txt)
+    *   [`graph.h`](graph.h)
+    *   [`routes.cpp`](routes.cpp)
+    *   [`city_connections.txt`](city_connections.txt)
 
 1.  **DESCRIPTION AND FILES TO BE UPDATED...**
+
     Once again use your binary heap min-prority queue, this to
-    compress the image displayed below. The left image uses 8-bit
+    compress the image displayed below. The top/left image uses 8-bit
     grayscale (i.e., 256 luminance levels) and is 429x600 pixels.
-    The right image has the same dimensions, but uses only 4 bits
+    The bottom/right image has the same dimensions, but uses only 4 bits
     per pixel. However, it can be further compressed by using
     Huffman encoding.
 
     ![kayak_gray.png](kayak_gray.png) | ![kayak_reduced.png](kayak_reduced.png)
 
     Complete/answer the following tasks/questions:
-    i.  Complete the code in [`huffman.cpp`](huffman.cpp) to
+    *   Complete the code in [`huffman.cpp`](huffman.cpp) to
         reduce/compress the image data. This file uses classes and
         functions defined in [`huffman.h`](huffman.h) and
         [`image.h`](image.h), which you probably want to look at for
@@ -69,19 +71,23 @@
         instead a text file containing a 429x600 matrix of pixel
         brightnesses (grayscale levels) for you to work with in C++
         without having to install additional tools on your computer.
-        * [`huffman.cpp`](huffman.cpp)
-        * [`huffman.h`](huffman.h)
-        * [`image.h`](image.h)
-        * [`kayak_mat.dat`](kayak_mat.dat)
+        
+        *  [`huffman.cpp`](huffman.cpp)
+        *  [`huffman.h`](huffman.h)
+        *  [`image.h`](image.h)
+        *  [`kayak_mat.dat`](kayak_mat.dat)
 
-    i.  Why is does the compression factor typically improve as
+    *   Why is does the compression factor typically improve as
         the number of grayscale levels are reduced? But why is
         it worse for 8 levels compared to 9 levels?
 
 
-1.  ** *Extra credit:* **
+1.  ***Extra credit:***
+
     **DESCRIPTION AND FILES TO BE UPDATED...**
 
+
+# 
 
 If you are running Windows and do not already know how to compile and execute C++
 programs on your machine, these instructions should be helpful:
