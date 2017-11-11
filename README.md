@@ -49,14 +49,14 @@
     *   [`routes.cpp`](routes.cpp)
     *   [`city_connections.txt`](city_connections.txt)
 
-1.  **DESCRIPTION AND FILES TO BE UPDATED...**
-
-    Once again use your binary heap min-prority queue, this to
-    compress the image displayed below. The top/left image uses 8-bit
-    grayscale (i.e., 256 luminance levels) and is 429x600 pixels.
+1.  Once again use your binary heap min-prority queue, this to
+    compress the image displayed below. The top/left image uses 16-bit
+    grayscale (i.e., 65536 luminance/brightness levels) and is 429x600 pixels.
     The bottom/right image has the same dimensions, but uses only 4 bits
-    per pixel. However, it can be further compressed by using
-    Huffman encoding.
+    per pixel (16 luminance levels). However, it can be further compressed by
+    using Huffman encoding by considering the pixel values as "letters" in an
+    "alphabet" of the allowed luminance levels. For example, an 8-bit
+    brightness scale has 256 "letters".
 
     ![kayak_gray.png](kayak_gray.png) | ![kayak_reduced.png](kayak_reduced.png)
 
@@ -65,9 +65,8 @@
         reduce/compress the image data. This file uses classes and
         functions defined in [`huffman.h`](huffman.h) and
         [`image.h`](image.h), which you probably want to look at for
-        reference, but should not need to modify. Download the code
-        and image files below. Note that the image file is not
-        actually encoded in a standard image file format, it is
+        reference, but should not need to modify. Note that the image file is
+        not actually encoded in a standard image file format, it is
         instead a text file containing a 429x600 matrix of pixel
         brightnesses (grayscale levels) for you to work with in C++
         without having to install additional tools on your computer.
@@ -80,6 +79,12 @@
     *   Why is does the compression factor typically improve as
         the number of grayscale levels are reduced? But why is
         it worse for 8 levels compared to 9 levels?
+
+    The brightness levels in the image matrix provided here are decimals
+    between 0 and 1, but I don't actually care what their scale is. The
+    `reduce_img_mat()` function can change them to integers if you like.
+    (For example, values {0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875} or
+    {0, 1, 2, 3, 4, 5, 6, 7} in the 3-bit case are both fine.)
 
 
 1.  ***Extra credit:***
