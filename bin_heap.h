@@ -13,7 +13,8 @@ template <class data_type, class key_type=double>
 class BinaryHeap {
     private:
         vector<data_type> values;
-        map<data_type, key_type> keys;
+        // map<data_type, key_type> keys;
+        vector<key_type> keys;
 
         int get_position(data_type value) {
             /* Returns the position in the heap of the input value. Position
@@ -118,7 +119,8 @@ class BinaryHeap {
                 for (int i=0; i < n; i++) {
                     if (start + i < size()) {
                         string val = values[start + i];
-                        cout << val << " (" << keys[val]<< ") ";
+                        // cout << val << " (" << keys[val]<< ") ";
+                        cout << val << " (" << keys[start + i]<< ") ";
                     } else {
                         break;
                     }
