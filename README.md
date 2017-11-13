@@ -76,8 +76,9 @@
         *  [`image.h`](image.h)
         *  [`kayak_mat.dat`](kayak_mat.dat)
 
-    *   Why is does the compression factor typically improve as
-        the number of grayscale levels are reduced? But why is
+    *   Why does the compression factor (the ratio of the number of bits used
+        to encode the image with and without Huffman encoding) typically
+        improve as the number of grayscale levels are reduced? But why is
         it worse for 8 levels compared to 9 levels?
 
     The brightness levels in the image matrix provided here are decimals
@@ -88,8 +89,50 @@
 
 
 1.  ***Extra credit:***
+    The greedy algorithm to solve the set cover problem presented in the text
+    and lecture was shown to find a "near optimal" solution; i.e., not the
+    smallest covering set, but only larger than the optimal solution by a
+    factor of ln(|*V*|). Here, we will compare the greedy algorithm to one in
+    which covering sets are randomly selected (to see how much better we can do
+    by at least attempting to find a better solution with simple greedy
+    approach), as well as implement an algorithm that finds the optimal
+    solution. Finding the optimal solution will, however, prove intractable for
+    large graphs, so you we will not attempt this for the large `egonet` graph.
 
-    **DESCRIPTION AND FILES TO BE UPDATED...**
+    Suppose we would like to use a social network to launch some sort of
+    advertising campaign, but we would like to limit the number of users we
+    directly target with ads. Furthermore, suppose we believe that if one user
+    gets exposed to the ad, they are highly likely to share it with all of
+    their first-degree connections on the network. So we decide we would like
+    to target the smallest set of individuals whose direct connections will
+    cover the entire network.
+
+    We will use the same `egonet` graph from the last homework assignment. You
+    may have noticed, however, that a handful of users had 0 connections. Here
+    is a "reduced" version of the graph with those "empty" users removed:
+    [`egonet_graph_noempty.txt`](egonet_graph_noempty.txt).
+
+    *   Implement a greedy algorithm to select a subset of users in the egonet
+        graph that will cover the entire graph with their first-degree
+        connections.
+    *   Implement an algorithm that randomly (rather than greedily) grows a
+        subset of users that cover the graph, and compare the size of the one
+        found in this way on the egonet graph to the size of the covering
+        subset found with your greedy algorithm.
+    *   Specify an algorithm that will find the optimal solution, and estimate
+        its efficiency (e.g., approximately how many candidate subsets of users will test for set cover before one is found?) in big-*O* notation as a
+        function of the number of vertices/users. (Note that it will not test
+        *all* possible sets of users since we already know a limit on the size
+        of the optimal covering subset.)
+    *   Implement your algorithm above and test it by finding an optimal
+        solution to the school-placement problem from the text/lecture (chapter
+        5). You will need to create a text file with the relevant graph
+        (specified by an adjacency list) to load with the `read_adjacency_file()`
+        function.
+
+    Complete the above tasks by using/completing the following code files:
+    *   [`set_cover.h`](set_cover.h)
+    *   [`set_cover.cpp`](set_cover.h)
 
 
 # 
