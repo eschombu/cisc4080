@@ -28,7 +28,7 @@ void test_BinHeap() {
         }
         cout << "Heap:" << endl;
         H.print();
-        cout << "\n(Item, Key): ";
+        cout << "(Item, Key): ";
     }
     cout << endl;
 
