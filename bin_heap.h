@@ -16,6 +16,9 @@ class BinaryHeap {
         // map<data_type, key_type> keys;
         vector<key_type> keys;
 
+    public:
+        int size() { return values.size(); }
+
         int get_position(data_type value) {
             /* Returns the position in the heap of the input value. Position
             numbers start at 1 and increase from left to right and from root to
@@ -31,9 +34,6 @@ class BinaryHeap {
             }
             return position + 1;
         }
-
-    public:
-        int size() { return values.size(); }
 
         data_type pop_min() {
             /* Returns the element (value) with the lowest key, and removes it
