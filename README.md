@@ -76,10 +76,10 @@
         *  [`image.h`](image.h)
         *  [`kayak_mat.dat`](kayak_mat.dat)
 
-    *   Why does the compression factor (the ratio of the number of bits used
+    *   **Why does the compression factor (the ratio of the number of bits used
         to encode the image with and without Huffman encoding) typically
         improve as the number of grayscale levels are reduced? But why is
-        it worse for 8 levels compared to 9 levels?
+        it worse for 8 levels compared to 9 levels?**
 
     The brightness levels in the image matrix provided here are decimals
     between 0 and 1, but I don't actually care what their scale is. The
