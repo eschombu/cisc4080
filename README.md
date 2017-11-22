@@ -132,7 +132,7 @@
 
     Complete the above tasks by using/completing the following code files:
     *   [`set_cover.h`](set_cover.h)
-    *   [`set_cover.cpp`](set_cover.h)
+    *   [`set_cover.cpp`](set_cover.cpp)
 
 
 # 
