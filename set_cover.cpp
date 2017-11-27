@@ -12,12 +12,17 @@ vector<string> greedy_edge_cover(Graph g) {
     /* Uses greedy algorithm to pick a subset of vertices whose edges cover all
     vertices in the graph. Returns a vector of these vertices' labels. */
 
-    // Track uncovered vertices with boolean map and integer counter;
-    // also store set of vertices used for covering graph in a vector and a map
-    // for quickly checking if vertex in this subset
-    vector<string> covering_vertices;
-    map<string, bool> vertex_cover;
-    map<string, bool> covering_vertex_status;
+    // Track uncovered vertices with boolean map and integer counter
+    map<string, bool> vertex_cover;  // set values to true when vertex covered
+
+    // Store set of vertices used for covering graph in a vector and a map
+    // for quickly checking if vertex in this subset (rather than searching
+    // through covering_vertices to check if a given vertex is part of the
+    // covering subset)
+    vector<string> covering_vertices;  // holds covering vertices subset
+    map<string, bool> covering_vertex_status;  // set to true when vertex
+                                               // included in covering_vertices
+    // Initialize the above indicator maps
     for (int i=0; i < g.n_vertices(); i++){
         vertex_cover.insert(pair<string, bool> (g.vertices[i], false));
         covering_vertex_status.insert(
