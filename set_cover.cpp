@@ -60,6 +60,7 @@ vector<string> optimal_edge_cover(
 
     // If no candidates provided, begin with single-element ones
     if (candidates.size() == 0) {
+        candidates.reserve(g.n_vertices());
         for (int i=0; i < g.n_vertices(); i++) {
             vector<string> v (1, g.vertices[i]);
             candidates.push_back(v);
@@ -88,8 +89,8 @@ vector<string> optimal_edge_cover(
 
 int main(int argc, char *argv[]) {
     cout << "Testing " << argv[0] << " ...\n\n";
-    // Graph g = read_adjacency_file("school_set_cover_graph.txt", true);
-    Graph g = read_adjacency_file("egonet_graph_rmdup.txt", true);
+    string testfile = argv[1];
+    Graph g = read_adjacency_file(testfile, false, true);
 
     vector<string> greedy_cover = greedy_edge_cover(g);
     cout << "\nCovering vertices from greedy algorithm:";
