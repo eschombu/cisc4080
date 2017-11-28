@@ -1,7 +1,8 @@
 # [CISC 4080: Algorithms](http://www.dsm.fordham.edu/~eschomburg/algorithms/)
 
 ## Homework 6 (check back for updates)
-**Due Wednesday, November 22**
+**Problems 1 & 2 due Wednesday, November 22**
+**Problems 3 & 4 due Wednesday, November 29**
         
 1.  The following files contain an implementation, and some testing
     code, of a binary heap for use as a min-priority queue. You
