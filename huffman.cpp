@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include <vector>
 #include <cmath>
 #include <map>
@@ -133,13 +134,20 @@ double code_length(map<string, double> & frequencies,
     /**********************************/
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     // Read original image
     string img_file = "kayak_mat.dat";
     matrix<double> img_mat_0 = img::read_image_file(img_file);
 
     // Reduce bits per pixel and convert to string encoding
-    int nlevels = 9;
+    int nlevels = 8; // Default
+
+    // If argument provided to program, assume it is the number of brightness
+    // levels
+    if (argc == 2) {
+        // cout << argv[1] << " " << atoi(argv[1]) << endl;
+        nlevels = atoi(argv[1]);
+    }
     matrix<string> img_mat = reduce_img_mat(img_mat_0, nlevels);
 
 
