@@ -16,7 +16,7 @@ matrix<string> reduce_img_mat(matrix<double> & original, int nlevels) {
 
     int dim[2] = {original.nrow(), original.ncol()};
     matrix<string> out (dim);
-    
+
     /**********************************/
     /******* COMPLETE CODE HERE *******/
 
@@ -39,7 +39,8 @@ map<string, huffman::TreeNode> huffman_code_tree(
     // Create priority queue using a binary heap holding first the alphabet,
     // then their parent nodes in the encoding tree, with frequencies as keys.
     // Also create a map to hold all of the nodes in the tree, which will be
-    // returned at the end of this function.
+    // returned at the end of this function. Initially fill this map with the
+    // leaf nodes holding the alphabet letters.
     BinaryHeap<string, double> Q;
     map<string, huffman::TreeNode> nodes;
     
