@@ -128,7 +128,9 @@ Graph read_adjacency_file(const string & path, bool weighted=false,
                     // Read edge weight if graph is weighted
                     if (weighted) {
                         line_stream >> w;
-                        graph.add_edge(v1, v2, w, false);
+                        if (v2.size() > 0) {
+                            graph.add_edge(v1, v2, false);
+                        }
                     } else {
                         graph.add_edge(v1, v2, false);
                     }
