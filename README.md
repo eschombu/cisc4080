@@ -1,7 +1,9 @@
-This repository contains code and data files used in homework assignments for
+This repository simply describes and links to other repositories and web pages for
 the [Fall 2017 Computer Algorithms (CISC 4080)](http://www.dsm.fordham.edu/~eschomburg/algorithms/)
 course at [Fordham College at Lincoln Center](https://www.fordham.edu/info/21454/lincoln_center_campus).
 The class is taught by Erik Schomburg, PhD, who is also creating and maintaining
-the code in this repository.
+the code.
 
-See each directory above for its own assignment description.
+Each assignment has it's own repo:
+*   [Homework 5](https://github.com/prof-erik/cisc4080-hw5)
+*   [Homework 6](https://github.com/prof-erik/cisc4080-hw6)
