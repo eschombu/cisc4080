@@ -5,6 +5,6 @@ The class is taught by Erik Schomburg, PhD, who is also creating and maintaining
 the code.
 
 Each assignment has it's own repo:
-*   [Homework 5](https://github.com/prof-erik/cisc4080-hw5)
-*   [Homework 6](https://github.com/prof-erik/cisc4080-hw6)
-*   [Homework 7](https://github.com/prof-erik/cisc4080-hw7)
+*   [Homework 5](https://github.com/eschombu/cisc4080-hw5)
+*   [Homework 6](https://github.com/eschombu/cisc4080-hw6)
+*   [Homework 7](https://github.com/eschombu/cisc4080-hw7)
